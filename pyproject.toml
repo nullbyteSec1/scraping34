@@ -4,23 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scraping34"
-version = "1.0.0"
+version = "1.0.1"
 description = "Python library and CLI for scraping images from rule34.gg"
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
-
-authors = [
-    { name = "nullbyteSec1" }
-]
-
-keywords = [
-    "scraper",
-    "rule34",
-    "anime",
-    "python",
-    "cli",
-]
 
 dependencies = [
     "httpx",
@@ -28,14 +15,11 @@ dependencies = [
     "pillow",
 ]
 
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
-
-[project.urls]
-Homepage = "https://github.com/nullbyteSec1/scraping34"
-
 [project.scripts]
 scraping34 = "scraping34.scraping34:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
