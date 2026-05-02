@@ -1,0 +1,9 @@
+*venv/
+*build/
+*dist/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.bmp
