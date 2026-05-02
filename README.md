@@ -1,4 +1,8 @@
-# scraping34 
+#  🕷️ scraping34 
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![PyPI Version](https://img.shields.io/badge/pypi-0.1.0-blue.svg)](https://pypi.org)
+
 Scraping and a reusable library for scraping hentai rule34 in Python
 
 ## install
