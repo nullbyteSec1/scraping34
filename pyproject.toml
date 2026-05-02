@@ -1,23 +1,41 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "scraping34"
 version = "1.0.0"
-description = "scraping for hentai :D "
+description = "Python library and CLI for scraping images from rule34.gg"
 readme = "README.md"
-authors = [{name = "nullbyte", email = "nbyte2@proton.me"}]
-license = {text = "MIT"}
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+authors = [
+    { name = "nullbyteSec1" }
+]
+
+keywords = [
+    "scraper",
+    "rule34",
+    "anime",
+    "python",
+    "cli",
+]
+
+dependencies = [
+    "httpx",
+    "beautifulsoup4",
+    "pillow",
+]
+
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
 ]
 
 [project.urls]
-Homepage = "https://github.com/seuusuario/meu-pacote"
+Homepage = "https://github.com/nullbyteSec1/scraping34"
 
-dependencies = [
-"beautifulsoup4==4.14.3",
-"httpx==0.28.1"
-]
+[project.scripts]
+scraping34 = "scraping34.scraping34:main"

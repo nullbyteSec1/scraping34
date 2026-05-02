@@ -1,3 +1,22 @@
+Metadata-Version: 2.4
+Name: scraping34
+Version: 1.0.0
+Summary: Python library and CLI for scraping images from rule34.gg
+Author: nullbyteSec1
+License: MIT
+Project-URL: Homepage, https://github.com/nullbyteSec1/scraping34
+Keywords: scraper,rule34,anime,python,cli
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: beautifulsoup4
+Requires-Dist: pillow
+Dynamic: license-file
+
 # 🕷️ scraping34
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
@@ -38,7 +57,7 @@ pip install scraping34
 Basic usage:
 
 ```bash
-scraping34 -c tsunade -o hentai.jpg
+scraping34 -c "tsunade" -o hentai.jpg
 ```
 
 or:
