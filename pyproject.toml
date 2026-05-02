@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scraping34"
+version = "1.0.0"
+description = "scraping for hentai :D "
+readme = "README.md"
+authors = [{name = "nullbyte", email = "nbyte2@proton.me"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/seuusuario/meu-pacote"
+
+dependencies = [
+"beautifulsoup4==4.14.3",
+"httpx==0.28.1"
+]
