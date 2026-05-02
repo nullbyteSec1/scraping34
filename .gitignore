@@ -9,5 +9,5 @@
 *.gif
 *.bmp
 *__pycache__/
-scraping34.egg-info/
+*scraping34.egg-info/
 *.pyc

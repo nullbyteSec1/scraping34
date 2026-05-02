@@ -1,2 +1,0 @@
-[console_scripts]
-scraping34 = scraping34.scraping34:main
