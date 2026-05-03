@@ -120,21 +120,75 @@ class Scraping34:
                     url = match.group(1)
                     return url
 
-
     def _download_video(self, video_url: str, output_file: str):
-        with httpx.Client(timeout=30.0, follow_redirects=True) as client:
-            headers = {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                "Accept-Encoding": "identity",
-                "Range": "bytes=0-"
-            }
-            print("downloading your video...")
-            with client.stream("GET", video_url, headers=headers) as response:
-                response.raise_for_status()
-                with open(output_file, "wb") as f:
-                    for chunk in response.iter_bytes():
-                        f.write(chunk)
-                    print("[*]download successfully")
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0 Safari/537.36"
+            ),
+            "Referer": "https://www.hentaigem.com/",
+            "Accept": "*/*",
+            "Connection": "keep-alive",
+        }
+
+        timeout = httpx.Timeout(None)
+
+        print("[INFO] Downloading video...")
+
+        try:
+            with httpx.Client(
+                headers=headers,
+                timeout=timeout,
+                follow_redirects=True,
+                http2=True
+            ) as client:
+
+                with client.stream("GET", video_url) as response:
+
+                    response.raise_for_status()
+
+                    total = int(
+                        response.headers.get(
+                            "Content-Length",
+                            0
+                        )
+                    )
+
+                    downloaded = 0
+
+                    with open(output_file, "wb") as f:
+
+                        for chunk in response.iter_bytes(
+                            chunk_size=1024 * 1024
+                        ):
+
+                            if chunk:
+
+                                f.write(chunk)
+
+                                downloaded += len(chunk)
+
+                                if total:
+
+                                    percent = (
+                                        downloaded / total
+                                    ) * 100
+
+                                    print(
+                                        f"\r"
+                                        f"[INFO] "
+                                        f"{percent:.2f}% "
+                                        f"({downloaded // 1024 // 1024} MB)",
+                                        end=""
+                                    )
+
+            print("\n[SUCCESS] Download completed!")
+
+        except Exception as exc:
+            raise RuntimeError(
+                f"Video download failed: {exc}"
+            ) from exc
 
     @staticmethod
     def _download_image(image_url: str, temp_file: Path) -> None:
