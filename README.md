@@ -13,7 +13,7 @@ A lightweight and reusable Python library + CLI tool for scraping images from ru
 - 📦 Simple Python API
 - 💻 Full CLI support
 - 🖼️ Automatic image conversion
-- ⚡ Fast HTTP downloads using `httpx`
+- ⚡ Fast hentai downloads  (videos and photos)
 - 🧩 Built with clean and modular architecture
 - 🌍 Cross-platform support:
   - Windows
@@ -38,13 +38,13 @@ pip install scraping34
 Basic usage:
 
 ```bash
-scraping34 -c tsunade -o hentai.jpg
+scraping34 -c tsunade -o hentai.jpg -m photo
 ```
 
 or:
 
 ```bash
-python -m scraping34 -c hinata -o hinata.png
+python -m scraping34 -c hinata -o hinata.png -m photo
 ```
 
 ---
@@ -58,7 +58,8 @@ from scraping34 import Scraping34
 
 scraper = Scraping34(
     character="tsunade naruto",
-    output_file="hentai.jpg"
+    output_file="hentai.jpg",
+    output_media="photo"
 )
 
 result = scraper.run()
@@ -80,17 +81,12 @@ Creates a new scraper instance.
 |---|---|---|
 | `character` | `str` | Character/tag to search |
 | `output_file` | `str` | Output image filename |
-
+| `output_media` | `str` | output media format (video or photo) |
 ---
 
 # ▶️ `.run()`
 
 Executes the scraping pipeline:
-
-- Queries rule34.gg
-- Finds the first image
-- Downloads the image
-- Converts/saves to desired format
 
 ### Returns
 
