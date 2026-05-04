@@ -35,14 +35,20 @@ pip install scraping34
 
 # 🚀 CLI Usage
 
-To scrape a photo:
+### To scrape a photo:
+```bash
+scraping34 -c tsunade -o hentai.png -m photo
+```
 ```bash
 scraping34 -c="tsunade" -o="hentai.jpg" -m="photo"
 ```
 
-To scrape a video:
+#### To scrape a video:
 ```bash
-scraping34 -c="hinata" -o="hinata.mp4" -m="video"
+scraping34 -c hinata -o hinata_video.mp4 -m video
+```
+```bash
+scraping34 -c="hinata" -o="hinata_video.mp4" -m="video"
 ```
 
 ---
