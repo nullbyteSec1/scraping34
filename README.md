@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![PyPI Version](https://img.shields.io/badge/pypi-1.0.1-blue.svg)](https://pypi.org)
+[![PyPI Version](https://img.shields.io/badge/pypi-2.0.0-blue.svg)](https://pypi.org)
 
 A lightweight and reusable Python library + CLI tool for scraping images from rule34.gg.
 
@@ -35,16 +35,14 @@ pip install scraping34
 
 # 🚀 CLI Usage
 
-Basic usage:
-
+To scrape a photo:
 ```bash
-scraping34 -c tsunade -o hentai.jpg -m photo
+scraping34 -c="tsunade" -o="hentai.jpg" -m="photo"
 ```
 
-or:
-
+To scrape a video:
 ```bash
-python -m scraping34 -c hinata -o hinata.png -m photo
+scraping34 -c="hinata" -o="hinata.mp4" -m="video"
 ```
 
 ---
