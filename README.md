@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![PyPI Version](https://img.shields.io/badge/pypi-2.0.0-blue.svg)](https://pypi.org/project/scraping34/2.0.0/)
 
-A lightweight and reusable Python library + CLI tool for scraping images from rule34.gg.
+A lightweight and reusable Python library + CLI tool for scraping images and videos Japanese
 
 </div>
 
