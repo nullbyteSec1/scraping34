@@ -49,7 +49,7 @@ scraping34 -c tsunade -o hentai.png -m photo
 scraping34 -c="tsunade" -o="hentai.jpg" -m="photo"
 ```
 
-#### To scrape a video:
+### To scrape a video:
 ```bash
 scraping34 -c hinata -o hinata_video.mp4 -m video
 ```
