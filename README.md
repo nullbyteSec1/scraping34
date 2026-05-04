@@ -1,6 +1,5 @@
 <div align="center">
 
-<img width="100" height="100" 
 # 🕷️ scraping34
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
